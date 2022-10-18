@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class RewardResource extends JsonResource
+class UserResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,12 +16,9 @@ class RewardResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
-            'detail' => $this->detail,
-            'total_amount' => $this->total_amount,
-            'balance' => $this->balance,
+            'email' => $this->email,
             'point' => $this->point,
-            'codes' => $this->whenLoaded('rewardCodes')
+            'image_path' => $this->image_path,
         ];
     }
 }
